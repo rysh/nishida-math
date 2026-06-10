@@ -1,0 +1,21 @@
+[project]
+name = "gl-prover"
+version = "0.1.0"
+description = "Gödel-Löb logic prover with tableau and Kripke search for Generative Contradiction project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.0",
+    "hypothesis>=6.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

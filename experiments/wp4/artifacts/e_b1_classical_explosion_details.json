@@ -1,0 +1,86 @@
+{
+  "enumeration": [
+    {
+      "valuation": {
+        "lambda": false
+      },
+      "value": false
+    },
+    {
+      "valuation": {
+        "lambda": true
+      },
+      "value": false
+    }
+  ],
+  "enumeration_size": 2,
+  "formula": {
+    "left": {
+      "name": "lambda",
+      "type": "atom"
+    },
+    "right": {
+      "arg": {
+        "name": "lambda",
+        "type": "atom"
+      },
+      "type": "not"
+    },
+    "type": "iff"
+  },
+  "sample_conclusions": [
+    {
+      "type": "bot"
+    },
+    {
+      "name": "p",
+      "type": "atom"
+    },
+    {
+      "arg": {
+        "name": "p",
+        "type": "atom"
+      },
+      "type": "not"
+    },
+    {
+      "args": [
+        {
+          "name": "p",
+          "type": "atom"
+        },
+        {
+          "arg": {
+            "name": "p",
+            "type": "atom"
+          },
+          "type": "not"
+        }
+      ],
+      "type": "and"
+    },
+    {
+      "left": {
+        "name": "lambda",
+        "type": "atom"
+      },
+      "right": {
+        "arg": {
+          "name": "lambda",
+          "type": "atom"
+        },
+        "type": "not"
+      },
+      "type": "iff"
+    }
+  ],
+  "sample_vacuity_checks": [
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "satisfiable": false,
+  "vacuous_explosion": true
+}

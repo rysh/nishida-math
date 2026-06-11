@@ -1,0 +1,47 @@
+{
+  "ds_failure": {
+    "A": "b",
+    "B": "f"
+  },
+  "inert": true,
+  "inertness": {
+    "base_atoms": [
+      "p",
+      "q",
+      "r",
+      "s"
+    ],
+    "base_valuation_count": 81,
+    "comparison_count": 671660,
+    "formula_count": 110,
+    "full_valuation_count": 243,
+    "inert": true,
+    "lambda_contradiction_designated_full_valuations": 81,
+    "max_premises": 2,
+    "premise_set_count": 6106,
+    "violations": []
+  },
+  "liar_formula": {
+    "left": {
+      "name": "lambda",
+      "type": "atom"
+    },
+    "right": {
+      "arg": {
+        "name": "lambda",
+        "type": "atom"
+      },
+      "type": "not"
+    },
+    "type": "iff"
+  },
+  "liar_value_at_witness": "b",
+  "liar_witness": {
+    "lambda": "b"
+  },
+  "mp_failure": {
+    "A": "b",
+    "B": "f"
+  },
+  "satisfiable": true
+}

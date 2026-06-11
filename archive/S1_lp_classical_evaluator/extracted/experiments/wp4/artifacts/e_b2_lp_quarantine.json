@@ -1,0 +1,12 @@
+{
+  "ds_failure": {
+    "A": "b",
+    "B": "f"
+  },
+  "inert": true,
+  "mp_failure": {
+    "A": "b",
+    "B": "f"
+  },
+  "satisfiable": true
+}

@@ -1,0 +1,116 @@
+{
+  "spec": "Headline §1 of the simulation spec: one self-referential seed, three logical environments. Every cell is backed by a machine-checked artifact, and the values shown here were validated against the source artifacts at build time.",
+  "columns": [
+    "contradiction_status",
+    "what_follows",
+    "formal_witness",
+    "generativity"
+  ],
+  "rows": [
+    {
+      "environment": "Classical propositional logic",
+      "seed": "liar constraint λ ↔ ¬λ",
+      "contradiction_status": "explodes",
+      "what_follows": "everything (vacuous entailment)",
+      "formal_witness": {
+        "experiment": "E-B1",
+        "artifact": "experiments/wp4/artifacts/e_b1_classical_explosion.json",
+        "keys": {
+          "satisfiable": false,
+          "vacuous_explosion": true,
+          "enumeration_size": 2
+        },
+        "details_artifact": "experiments/wp4/artifacts/e_b1_classical_explosion_details.json",
+        "details_keys": {
+          "sample_vacuity_checks": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "generativity": "destroyed (everything derivable, nothing distinguishable)"
+    },
+    {
+      "environment": "LP (Priest's Logic of Paradox)",
+      "seed": "same liar constraint λ ↔ ¬λ",
+      "contradiction_status": "tolerated",
+      "what_follows": "nothing new in the λ-free language (inert)",
+      "formal_witness": {
+        "experiment": "E-B2",
+        "artifact": "experiments/wp4/artifacts/e_b2_lp_quarantine.json",
+        "keys": {
+          "satisfiable": true,
+          "inert": true,
+          "mp_failure": {
+            "A": "b",
+            "B": "f"
+          },
+          "ds_failure": {
+            "A": "b",
+            "B": "f"
+          }
+        },
+        "details_artifact": "experiments/wp4/artifacts/e_b2_lp_quarantine_details.json",
+        "details_keys": {
+          "liar_witness": {
+            "lambda": "b"
+          },
+          "liar_value_at_witness": "b",
+          "inertness_scope": {
+            "base_atoms": [
+              "p",
+              "q",
+              "r",
+              "s"
+            ],
+            "formula_count": 110,
+            "max_premises": 2,
+            "premise_set_count": 6106,
+            "comparison_count": 671660,
+            "violations": []
+          }
+        }
+      },
+      "generativity": "zero (contradiction quarantined, no new λ-free consequences)"
+    },
+    {
+      "environment": "GL (Gödel-Löb provability logic)",
+      "seed": "Gödelian fixed point H ↔ ¬□H",
+      "contradiction_status": "resolved by ascent",
+      "what_follows": "a strictly higher consistency level (Con_n ⊊ Con_{n+1})",
+      "formal_witness": {
+        "experiment": "E-A2",
+        "artifact": "experiments/wp3/artifacts/ladder_manifest.json",
+        "keys": {
+          "max_n": 8,
+          "exhaustive_max": 4,
+          "all_monotone_proved": true,
+          "all_strict_refuted": true,
+          "all_countermodels_verified": true,
+          "witness_world_counts": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "minimality_exhaustively_checked_for": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      },
+      "generativity": "unbounded (each stage requires a strictly deeper frame; linear n+2)"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: install uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: pin python
+        run: uv python install 3.12
+
+      - name: sync dependencies
+        run: uv sync
+
+      - name: run pytest
+        run: uv run pytest -q
+
+      - name: regenerate experiment artifacts
+        run: |
+          uv run python experiments/wp3/build_countermodels.py
+          uv run python experiments/wp3/build_ladder.py
+          uv run python experiments/wp3/build_figure.py
+          uv run python experiments/wp4/e_b1_classical_explosion.py
+          uv run python experiments/wp4/e_b2_lp_quarantine.py
+          uv run python experiments/wp5/build_claims.py
+          uv run python experiments/wp5/build_table.py
+          uv run python experiments/wp5/build_figure.py
+
+      - name: assert artifacts are deterministic
+        run: git diff --exit-code

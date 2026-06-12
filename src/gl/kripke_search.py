@@ -161,4 +161,30 @@ def _model_json(
     }
 
 
-__all__ = ["prove_gl"]
+def enumerate_finite_gl_frames(
+    num_worlds: int,
+    *,
+    height_bound: int | None = None,
+) -> tuple[tuple[tuple[int, int], ...], ...]:
+    """Enumerate all rooted finite GL frames on `num_worlds` worlds.
+
+    Each returned frame is a sorted tuple of ``(source, target)`` edges
+    representing the transitive irreflexive accessibility relation. World 0
+    is the root and must reach every other world (transitivity then forces
+    ``0 R i`` for all ``i > 0``); transitivity is enforced at generation
+    time, not by post-hoc filtering. ``height_bound`` defaults to
+    ``max(0, num_worlds - 1)`` which imposes no extra restriction beyond
+    what ``num_worlds`` already implies.
+
+    The result is cached via the underlying private enumerator, so repeated
+    calls with the same arguments return the same tuple instance.
+    """
+    if num_worlds < 0:
+        raise ValueError("num_worlds must be non-negative")
+    bound = height_bound if height_bound is not None else max(0, num_worlds - 1)
+    if bound < 0:
+        raise ValueError("height_bound must be non-negative")
+    return _frames(num_worlds, bound)
+
+
+__all__ = ["prove_gl", "enumerate_finite_gl_frames"]

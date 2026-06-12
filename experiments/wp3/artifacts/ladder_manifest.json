@@ -1,0 +1,118 @@
+{
+  "spec": "GL hierarchy of iterated consistency; minimal witness world count grows as n + 2.",
+  "max_n": 8,
+  "exhaustive_max": 4,
+  "stages": [
+    {
+      "stage": 0,
+      "monotone_status": "proved",
+      "strict_status": "refuted",
+      "witness_world_count": 2,
+      "countermodel_path": "experiments/wp3/countermodels/strict_n0.json",
+      "countermodel_verified": true,
+      "minimality_exhaustively_checked": true,
+      "minimality_check": {
+        "smallest_frame_size_tried": 1,
+        "largest_frame_size_tried": 1,
+        "frames_examined": 1,
+        "ok": true
+      }
+    },
+    {
+      "stage": 1,
+      "monotone_status": "proved",
+      "strict_status": "refuted",
+      "witness_world_count": 3,
+      "countermodel_path": "experiments/wp3/countermodels/strict_n1.json",
+      "countermodel_verified": true,
+      "minimality_exhaustively_checked": true,
+      "minimality_check": {
+        "smallest_frame_size_tried": 1,
+        "largest_frame_size_tried": 2,
+        "frames_examined": 2,
+        "ok": true
+      }
+    },
+    {
+      "stage": 2,
+      "monotone_status": "proved",
+      "strict_status": "refuted",
+      "witness_world_count": 4,
+      "countermodel_path": "experiments/wp3/countermodels/strict_n2.json",
+      "countermodel_verified": true,
+      "minimality_exhaustively_checked": true,
+      "minimality_check": {
+        "smallest_frame_size_tried": 1,
+        "largest_frame_size_tried": 3,
+        "frames_examined": 4,
+        "ok": true
+      }
+    },
+    {
+      "stage": 3,
+      "monotone_status": "proved",
+      "strict_status": "refuted",
+      "witness_world_count": 5,
+      "countermodel_path": "experiments/wp3/countermodels/strict_n3.json",
+      "countermodel_verified": true,
+      "minimality_exhaustively_checked": true,
+      "minimality_check": {
+        "smallest_frame_size_tried": 1,
+        "largest_frame_size_tried": 4,
+        "frames_examined": 11,
+        "ok": true
+      }
+    },
+    {
+      "stage": 4,
+      "monotone_status": "proved",
+      "strict_status": "refuted",
+      "witness_world_count": 6,
+      "countermodel_path": "experiments/wp3/countermodels/strict_n4.json",
+      "countermodel_verified": true,
+      "minimality_exhaustively_checked": true,
+      "minimality_check": {
+        "smallest_frame_size_tried": 1,
+        "largest_frame_size_tried": 5,
+        "frames_examined": 51,
+        "ok": true
+      }
+    },
+    {
+      "stage": 5,
+      "monotone_status": "proved",
+      "strict_status": "refuted",
+      "witness_world_count": 7,
+      "countermodel_path": "experiments/wp3/countermodels/strict_n5.json",
+      "countermodel_verified": true,
+      "minimality_exhaustively_checked": false
+    },
+    {
+      "stage": 6,
+      "monotone_status": "proved",
+      "strict_status": "refuted",
+      "witness_world_count": 8,
+      "countermodel_path": "experiments/wp3/countermodels/strict_n6.json",
+      "countermodel_verified": true,
+      "minimality_exhaustively_checked": false
+    },
+    {
+      "stage": 7,
+      "monotone_status": "proved",
+      "strict_status": "refuted",
+      "witness_world_count": 9,
+      "countermodel_path": "experiments/wp3/countermodels/strict_n7.json",
+      "countermodel_verified": true,
+      "minimality_exhaustively_checked": false
+    },
+    {
+      "stage": 8,
+      "monotone_status": "proved",
+      "strict_status": "refuted",
+      "witness_world_count": 10,
+      "countermodel_path": "experiments/wp3/countermodels/strict_n8.json",
+      "countermodel_verified": true,
+      "minimality_exhaustively_checked": false
+    }
+  ]
+}

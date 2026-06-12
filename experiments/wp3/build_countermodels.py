@@ -54,7 +54,7 @@ def strict_countermodel(n: int) -> dict[str, Any]:
     }
 
 
-def write_countermodels(output_dir: Path, max_n: int = 4) -> list[Path]:
+def write_countermodels(output_dir: Path, max_n: int = 8) -> list[Path]:
     """Write strict_n0.json through strict_n{max_n}.json and return their paths."""
     if max_n < 0:
         raise ValueError("max_n must be non-negative")
@@ -73,5 +73,5 @@ def write_countermodels(output_dir: Path, max_n: int = 4) -> list[Path]:
 
 if __name__ == "__main__":
     default_dir = Path(__file__).resolve().parent / "countermodels"
-    for output_path in write_countermodels(default_dir, max_n=4):
+    for output_path in write_countermodels(default_dir, max_n=8):
         print(output_path)

@@ -1,0 +1,50 @@
+{
+  "worlds": [
+    0,
+    1
+  ],
+  "rel": [
+    [
+      0,
+      1
+    ]
+  ],
+  "val": {},
+  "refutes": {
+    "formula": {
+      "type": "imp",
+      "left": {
+        "type": "not",
+        "arg": {
+          "type": "box",
+          "arg": {
+            "type": "bot"
+          }
+        }
+      },
+      "right": {
+        "type": "not",
+        "arg": {
+          "type": "box",
+          "arg": {
+            "type": "not",
+            "arg": {
+              "type": "not",
+              "arg": {
+                "type": "box",
+                "arg": {
+                  "type": "bot"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "at": 0
+  },
+  "checks": {
+    "transitive": true,
+    "irreflexive": true
+  }
+}

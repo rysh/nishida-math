@@ -1,0 +1,31 @@
+// Main Algorithm (Recursive Sambin / Boolos)
+function fixed_point(A, p):
+    if p not in A:
+        return A
+    
+    top_boxes = get_maximal_box_subformulas_containing(A, p)
+    D_map = empty dictionary
+    
+    for T in top_boxes:  // T is of the form Box(B)
+        A_T = replace_subformula(A, T, Top)
+        fp_A_T = fixed_point(A_T, p)  // Recursive solving
+        D = Box( replace_variable(T.arg, p, fp_A_T) )
+        D_map[T] = D
+        
+    H = A
+    for T, D in D_map:
+        H = replace_subformula(H, T, D)
+        
+    return H
+
+// Alternative Algorithm (De Jongh-Sambin Direct Substitution)
+function fixed_point_alt(A, p):
+    if p not in A:
+        return A
+        
+    top_boxes = get_maximal_box_subformulas_containing(A, p)
+    A_top = A
+    for T in top_boxes:
+        A_top = replace_subformula(A_top, T, Top)
+        
+    return replace_variable(A, p, A_top)

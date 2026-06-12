@@ -1,0 +1,24 @@
+// Main Implementation (Recursive Sambin/Boolos) - src/gl/fixed_point.py
+function fixed_point(A, p):
+    if p not in A: return A
+    top_boxes = get_top_boxes(A, p)
+    D_map = empty dictionary
+    for T in top_boxes:
+        A_T = replace_subformula(A, T, Top)
+        fp_A_T = fixed_point(A_T, p) // Recursive Call
+        D = Box( replace_variable(T.arg, p, fp_A_T) )
+        D_map[T] = D
+    return replace_subformulas_via_map(A, D_map)
+
+// Alternative Implementation (Iterative Loop Elimination) - src/gl/fixed_point_alt.py
+function fixed_point_alt(A, p):
+    if p not in A: return A
+    top_boxes = get_top_boxes(A, p)
+    resolved_map = empty dictionary
+    for T in top_boxes:  // Non-recursive loop
+        local_A_top = A
+        for other in top_boxes:
+            if other != T: local_A_top = replace_subformula(local_A_top, other, Top)
+        local_A_top = replace_subformula(local_A_top, T, Top)
+        resolved_map[T] = Box( replace_variable(T.arg, p, local_A_top) )
+    return replace_subformulas_via_map(A, resolved_map)

@@ -1,0 +1,38 @@
+
+==================================== ERRORS ====================================
+_______________ ERROR collecting tests/test_fixed_point_kats.py ________________
+ImportError while importing test module '/mnt/data/T2_revised/T2_fixed_point_chatgpt/tests/test_fixed_point_kats.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_fixed_point_kats.py:8: in <module>
+    import gl.fixed_point as fixed_point_module
+E   ModuleNotFoundError: No module named 'gl'
+______________ ERROR collecting tests/test_fixed_point_random.py _______________
+ImportError while importing test module '/mnt/data/T2_revised/T2_fixed_point_chatgpt/tests/test_fixed_point_random.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_fixed_point_random.py:3: in <module>
+    from hypothesis import HealthCheck, given, settings
+E   ModuleNotFoundError: No module named 'hypothesis'
+____________ ERROR collecting tests/test_fixed_point_uniqueness.py _____________
+ImportError while importing test module '/mnt/data/T2_revised/T2_fixed_point_chatgpt/tests/test_fixed_point_uniqueness.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_fixed_point_uniqueness.py:3: in <module>
+    from hypothesis import HealthCheck, given, settings
+E   ModuleNotFoundError: No module named 'hypothesis'
+=========================== short test summary info ============================
+ERROR tests/test_fixed_point_kats.py
+ERROR tests/test_fixed_point_random.py
+ERROR tests/test_fixed_point_uniqueness.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 3 errors during collection !!!!!!!!!!!!!!!!!!!!
+3 errors in 0.36s

@@ -1,0 +1,35 @@
+# 定理: GL ⊢ Con_n ↔ ¬□^{n+1}⊥
+
+## 定義
+* $Con_0 := \neg\Box\bot$
+* $Con_{n+1} := \neg\Box\neg Con_n$
+* $\Box^0 A := A$
+* $\Box^{k+1} A := \Box(\Box^k A)$
+
+## 証明（$n$ に関する数学的帰納法）
+
+### Base case ($n=0$)
+定義より $Con_0 = \neg\Box\bot$ である。
+一方、右辺は $\neg\Box^{0+1}\bot = \neg\Box^1\bot = \neg\Box\bot$ である。
+両辺は構文的に全く同一の論理式であるため、自明に $\vdash_{GL} Con_0 \leftrightarrow \neg\Box^{1}\bot$ が成立する。
+
+### Inductive step
+ある $n \ge 0$ について、以下が GL で証明可能であると仮定する（帰納法の仮定、IH）。
+$\vdash_{GL} Con_n \leftrightarrow \neg\Box^{n+1}\bot$
+
+次に $n+1$ のケース、すなわち $\vdash_{GL} Con_{n+1} \leftrightarrow \neg\Box^{n+2}\bot$ を示す。
+
+1. $Con_{n+1} = \neg\Box\neg Con_n$ （$Con$ の定義）
+2. $\vdash_{GL} \neg Con_n \leftrightarrow \Box^{n+1}\bot$
+   * (理由) 帰納法の仮定 (IH) に対し、命題論理の定理 $(P \leftrightarrow \neg Q) \to (\neg P \leftrightarrow Q)$ を適用した（**命題的同値**）。ここでは GL 固有の推論規則は一切用いていない。
+3. $\vdash_{GL} \Box(\neg Con_n) \leftrightarrow \Box(\Box^{n+1}\bot)$
+   * (理由) GL の合同性（Congruence）による。2 の結果に対して Necessitation 規則 ($A \Rightarrow \Box A$) と分配公理 K ($\Box(A \to B) \to (\Box A \to \Box B)$) を適用し、同値性を $\Box$ の内部に持ち込んだ（**GL-同値**）。Löb の公理は不要である。
+4. $\Box(\Box^{n+1}\bot) \equiv \Box^{n+2}\bot$ （$\Box^k$ の定義）
+5. $\vdash_{GL} \Box(\neg Con_n) \leftrightarrow \Box^{n+2}\bot$
+   * (理由) 3 と 4 より。
+6. $\vdash_{GL} \neg\Box(\neg Con_n) \leftrightarrow \neg\Box^{n+2}\bot$
+   * (理由) 5 に対し、命題論理の定理 $(P \leftrightarrow Q) \to (\neg P \leftrightarrow \neg Q)$ を適用（**命題的同値**）。
+7. $\vdash_{GL} Con_{n+1} \leftrightarrow \neg\Box^{n+2}\bot$
+   * (理由) 6 の左辺を 1 の定義で置き換えた。
+
+以上より、すべての $n \ge 0$ について $\vdash_{GL} Con_n \leftrightarrow \neg\Box^{n+1}\bot$ が示された。（証明終）

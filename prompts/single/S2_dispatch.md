@@ -127,7 +127,8 @@ def nf_equiv(F1: Formula, F2: Formula) -> bool:
 | `Box(bot())` | `box_power(bot(), 1)` |
 | `Box(Box(bot()))` | `box_power(bot(), 2)` |
 | `Not(Box(bot()))` | `Not(box_power(bot(), 1))`（≡ Con_0） |
-| `Not(Box(Not(Box(bot()))))` | `Not(box_power(bot(), 2))`（≡ Con_1） |
+| `Not(Box(Not(Box(bot()))))` | `Not(box_power(bot(), 1))`（≡ Con_0、Con_1 ではない：Löb instance による collapse — 内側 `Not(Box(bot))` ≡ `Imp(Box(bot), bot)`、ゆえに `Box(Not(Box(bot)))` ≡ `Box(Imp(Box(bot), bot))` ≡ `Box(bot)`） |
+| `Not(Box(Box(bot())))` | `Not(box_power(bot(), 2))`（≡ Con_1） |
 | `Or(Box(bot()), Not(Box(bot())))` | `Not(bot())`（GL ⊢ φ ∨ ¬φ） |
 | `And(Box(bot()), Not(Box(bot())))` | `bot()` |
 | `Box(Imp(Box(bot()), bot()))` | `box_power(bot(), 1)`（Löb instance：□(□⊥→⊥)→□⊥ で吸収） |

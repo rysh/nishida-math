@@ -1,0 +1,60 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Generative Contradiction — A Computational Exhibit"
+type: software
+authors:
+  - family-names: "Philos Sophia"
+    given-names: "Franny"
+    affiliation: "Elanare Institute"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"  # TODO: fill in once available
+version: "0.1.0"
+date-released: "2026-06-14"
+license: "MIT"
+repository-code: "https://github.com/elanare/generative-contradiction"  # TODO: confirm final URL
+abstract: >
+  Computational exhibit of three modes of contradiction (destructive,
+  tolerative, generative) realised by sending the same self-referential
+  diagonal seed through Classical propositional logic, Priest's Logic of
+  Paradox (LP), and Gödel–Löb provability logic (GL). The same diagonal
+  seed launches a strict unbounded hierarchy in one environment and
+  provably nothing in the others. The artifact provides: a GL prover
+  (signed labelled tableau cross-checked with finite-Kripke search),
+  a fixed-point engine (de Jongh–Sambin / Boolos 1993) with an
+  independent verifier, classical and LP evaluators, a Con_n ladder
+  with machine-verified countermodels (and minimality exhaustively
+  verified for n ≤ 4), and an auto-generated headline table.
+  Illustration, not proof, of the philosophical thesis.
+keywords:
+  - provability-logic
+  - gödel-löb
+  - logic-of-paradox
+  - dialetheism
+  - self-reference
+  - fixed-point
+  - countermodel
+  - computational-exhibit
+references:
+  - type: article
+    authors:
+      - family-names: "Solovay"
+        given-names: "Robert M."
+    title: "Provability interpretations of modal logic"
+    journal: "Israel Journal of Mathematics"
+    volume: 25
+    year: 1976
+  - type: book
+    authors:
+      - family-names: "Boolos"
+        given-names: "George"
+    title: "The Logic of Provability"
+    publisher:
+      name: "Cambridge University Press"
+    year: 1993
+  - type: article
+    authors:
+      - family-names: "Priest"
+        given-names: "Graham"
+    title: "The Logic of Paradox"
+    journal: "Journal of Philosophical Logic"
+    volume: 8
+    year: 1979

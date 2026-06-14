@@ -16,6 +16,11 @@ version: "0.1.0"
 date-released: "2026-06-14"
 license: "MIT"
 repository-code: "https://github.com/rysh/nishida-math"
+doi: "10.5281/zenodo.20687363"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20687363"
+    description: "Concept DOI — always resolves to the latest version on Zenodo."
 abstract: >
   Computational exhibit of three modes of contradiction (destructive,
   tolerative, generative) realised by sending the same self-referential

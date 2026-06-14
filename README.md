@@ -1,5 +1,7 @@
 # Generative Contradiction — A Computational Exhibit
 
+[![DOI](https://zenodo.org/badge/1269017597.svg)](https://doi.org/10.5281/zenodo.20687363)
+
 > **Epistemic status: illustration, not proof, of the philosophical thesis.**
 > The underlying mathematics is known (Solovay 1976; de Jongh–Sambin;
 > Boolos 1993; Priest 1979). The contribution of this repository is
@@ -114,9 +116,11 @@ These come from §4 of the simulation spec and are encoded in the design.
 ## Citation
 
 If you use this software, please cite it via the
-[`CITATION.cff`](CITATION.cff) entry. A Zenodo record will provide a
-versioned DOI; until then, cite by repository name and commit hash. The
-associated paper is in preparation.
+[`CITATION.cff`](CITATION.cff) entry. Archived on Zenodo with concept
+DOI [10.5281/zenodo.20687363](https://doi.org/10.5281/zenodo.20687363)
+(the concept DOI always resolves to the latest version; individual
+released versions have their own DOIs). The associated paper is in
+preparation.
 
 ## Author
 

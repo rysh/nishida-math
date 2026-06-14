@@ -4,7 +4,15 @@
   "creators": [
     {
       "name": "Philos Sophia, Franny",
-      "affiliation": "Elanare Institute"
+      "affiliation": "Elanare Institute",
+      "orcid": "0009-0004-7089-5265"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/rysh/nishida-math",
+      "relation": "isSupplementTo",
+      "scheme": "url"
     }
   ],
   "keywords": [

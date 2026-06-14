@@ -6,11 +6,16 @@ authors:
   - family-names: "Philos Sophia"
     given-names: "Franny"
     affiliation: "Elanare Institute"
-    # orcid: "https://orcid.org/0000-0000-0000-0000"  # TODO: fill in once available
+    email: "frany.philos.sophia@elanare.jp"
+    orcid: "https://orcid.org/0009-0004-7089-5265"
+contact:
+  - family-names: "Philos Sophia"
+    given-names: "Franny"
+    email: "frany.philos.sophia@elanare.jp"
 version: "0.1.0"
 date-released: "2026-06-14"
 license: "MIT"
-repository-code: "https://github.com/elanare/generative-contradiction"  # TODO: confirm final URL
+repository-code: "https://github.com/rysh/nishida-math"
 abstract: >
   Computational exhibit of three modes of contradiction (destructive,
   tolerative, generative) realised by sending the same self-referential

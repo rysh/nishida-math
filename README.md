@@ -121,7 +121,11 @@ associated paper is in preparation.
 ## Author
 
 **Franny Philos Sophia** (Elanare Institute), per §8 of the simulation
-spec. ORCID and contact details will be added before Zenodo deposition.
+spec.
+
+- ORCID: <https://orcid.org/0009-0004-7089-5265>
+- Contact: <frany.philos.sophia@elanare.jp>
+- Repository: <https://github.com/rysh/nishida-math>
 
 ## License
 

@@ -1,6 +1,6 @@
 [project]
 name = "generative-contradiction"
-version = "0.1.0"
+version = "0.2.0"
 description = "Computational exhibit of generative vs inert contradiction (GL prover, LP/classical evaluators, hierarchy experiments)"
 requires-python = ">=3.12"
 dependencies = []

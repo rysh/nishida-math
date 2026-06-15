@@ -12,8 +12,8 @@ contact:
   - family-names: "Philos Sophia"
     given-names: "Franny"
     email: "frany.philos.sophia@elanare.jp"
-version: "0.1.0"
-date-released: "2026-06-14"
+version: "0.2.0"
+date-released: "2026-06-15"
 license: "MIT"
 repository-code: "https://github.com/rysh/nishida-math"
 doi: "10.5281/zenodo.20687363"
@@ -33,6 +33,12 @@ abstract: >
   independent verifier, classical and LP evaluators, a Con_n ladder
   with machine-verified countermodels (and minimality exhaustively
   verified for n ≤ 4), and an auto-generated headline table.
+  Version 0.2.0 adds two optional WP6 control artifacts: a finite
+  Kripke-style fixed-point model for a transparent truth predicate
+  over LP / strong-Kleene (E-C1, first-order upgrade of the LP
+  quarantine experiment), and a Lean 4 instantiation of the strict
+  stage-1 strengthening 𝗜𝚺₁ ⪱ 𝗜𝚺₁ + Con(𝗜𝚺₁) via
+  FormalizedFormalLogic/Foundation (E-C2).
   Illustration, not proof, of the philosophical thesis.
 keywords:
   - provability-logic

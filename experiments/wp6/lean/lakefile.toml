@@ -1,0 +1,10 @@
+name = "S7Wp6LeanInstantiation"
+defaultTargets = ["S7Wp6LeanInstantiation"]
+
+[[require]]
+name = "Foundation"
+git = "https://github.com/FormalizedFormalLogic/Foundation.git"
+rev = "c28942b7d9d0df41ee5b736602c3f27b8643532c"
+
+[[lean_lib]]
+name = "S7Wp6LeanInstantiation"

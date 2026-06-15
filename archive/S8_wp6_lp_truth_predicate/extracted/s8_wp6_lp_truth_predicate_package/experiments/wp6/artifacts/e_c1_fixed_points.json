@@ -1,0 +1,424 @@
+{
+  "base_atoms": {
+    "p": "t",
+    "q": "f"
+  },
+  "base_fragment_code_table": {
+    "T_p": {
+      "arg": "p",
+      "type": "T"
+    },
+    "T_q": {
+      "arg": "q",
+      "type": "T"
+    },
+    "p": {
+      "name": "p",
+      "type": "atom"
+    },
+    "p_or_q": {
+      "args": [
+        {
+          "name": "p",
+          "type": "atom"
+        },
+        {
+          "name": "q",
+          "type": "atom"
+        }
+      ],
+      "type": "or"
+    },
+    "q": {
+      "name": "q",
+      "type": "atom"
+    },
+    "truthteller": {
+      "arg": "truthteller",
+      "type": "T"
+    }
+  },
+  "classical_contrast": {
+    "fixed_point_count": 0,
+    "liar_truth_sequence_from_empty": [
+      false,
+      true,
+      false,
+      true,
+      false,
+      true,
+      false
+    ],
+    "trace_from_empty": [
+      {
+        "liar_true": false,
+        "stage": 0,
+        "true_codes": []
+      },
+      {
+        "liar_true": true,
+        "stage": 1,
+        "true_codes": [
+          "liar",
+          "liar_or_p",
+          "p",
+          "p_or_q"
+        ]
+      },
+      {
+        "liar_true": false,
+        "stage": 2,
+        "true_codes": [
+          "T_p",
+          "liar_or_p",
+          "p",
+          "p_or_q"
+        ]
+      },
+      {
+        "liar_true": true,
+        "stage": 3,
+        "true_codes": [
+          "T_p",
+          "liar",
+          "liar_or_p",
+          "p",
+          "p_or_q"
+        ]
+      },
+      {
+        "liar_true": false,
+        "stage": 4,
+        "true_codes": [
+          "T_p",
+          "liar_or_p",
+          "p",
+          "p_or_q"
+        ]
+      },
+      {
+        "liar_true": true,
+        "stage": 5,
+        "true_codes": [
+          "T_p",
+          "liar",
+          "liar_or_p",
+          "p",
+          "p_or_q"
+        ]
+      },
+      {
+        "liar_true": false,
+        "stage": 6,
+        "true_codes": [
+          "T_p",
+          "liar_or_p",
+          "p",
+          "p_or_q"
+        ]
+      }
+    ]
+  },
+  "formula_schema_extension": {
+    "added_node": {
+      "arg": "<explicit finite sentence code>",
+      "type": "T"
+    }
+  },
+  "full_fragment_code_table": {
+    "T_p": {
+      "arg": "p",
+      "type": "T"
+    },
+    "T_q": {
+      "arg": "q",
+      "type": "T"
+    },
+    "liar": {
+      "arg": {
+        "arg": "liar",
+        "type": "T"
+      },
+      "type": "not"
+    },
+    "liar_and_not_liar": {
+      "args": [
+        {
+          "arg": {
+            "arg": "liar",
+            "type": "T"
+          },
+          "type": "not"
+        },
+        {
+          "arg": {
+            "arg": {
+              "arg": "liar",
+              "type": "T"
+            },
+            "type": "not"
+          },
+          "type": "not"
+        }
+      ],
+      "type": "and"
+    },
+    "liar_or_p": {
+      "args": [
+        {
+          "arg": {
+            "arg": "liar",
+            "type": "T"
+          },
+          "type": "not"
+        },
+        {
+          "name": "p",
+          "type": "atom"
+        }
+      ],
+      "type": "or"
+    },
+    "p": {
+      "name": "p",
+      "type": "atom"
+    },
+    "p_or_q": {
+      "args": [
+        {
+          "name": "p",
+          "type": "atom"
+        },
+        {
+          "name": "q",
+          "type": "atom"
+        }
+      ],
+      "type": "or"
+    },
+    "q": {
+      "name": "q",
+      "type": "atom"
+    },
+    "truthteller": {
+      "arg": "truthteller",
+      "type": "T"
+    }
+  },
+  "inertness": {
+    "lp": {
+      "depth": 2,
+      "generated_liar_free_formula_count": 7265,
+      "mismatches": [],
+      "passed": true,
+      "scheme": "lp"
+    },
+    "sk": {
+      "depth": 2,
+      "generated_liar_free_formula_count": 7265,
+      "mismatches": [],
+      "passed": true,
+      "scheme": "sk"
+    }
+  },
+  "schema_version": "wp6-e-c1-v1",
+  "schemes": {
+    "lp": {
+      "admissible_values": [
+        "t",
+        "f",
+        "b"
+      ],
+      "designated_values": [
+        "t",
+        "b"
+      ],
+      "least_fixed_point": {
+        "E_minus": [
+          "T_q",
+          "liar",
+          "liar_and_not_liar",
+          "q",
+          "truthteller"
+        ],
+        "E_plus": [
+          "T_p",
+          "liar",
+          "liar_and_not_liar",
+          "liar_or_p",
+          "p",
+          "p_or_q",
+          "truthteller"
+        ]
+      },
+      "least_fixed_point_values": {
+        "T_p": "t",
+        "T_q": "f",
+        "liar": "b",
+        "liar_and_not_liar": "b",
+        "liar_or_p": "t",
+        "p": "t",
+        "p_or_q": "t",
+        "q": "f",
+        "truthteller": "b"
+      },
+      "order": "reverse inclusion on (E_plus,E_minus); b is bottom",
+      "trace": [
+        {
+          "E_minus": [
+            "T_p",
+            "T_q",
+            "liar",
+            "liar_and_not_liar",
+            "liar_or_p",
+            "p",
+            "p_or_q",
+            "q",
+            "truthteller"
+          ],
+          "E_plus": [
+            "T_p",
+            "T_q",
+            "liar",
+            "liar_and_not_liar",
+            "liar_or_p",
+            "p",
+            "p_or_q",
+            "q",
+            "truthteller"
+          ]
+        },
+        {
+          "E_minus": [
+            "T_p",
+            "T_q",
+            "liar",
+            "liar_and_not_liar",
+            "q",
+            "truthteller"
+          ],
+          "E_plus": [
+            "T_p",
+            "T_q",
+            "liar",
+            "liar_and_not_liar",
+            "liar_or_p",
+            "p",
+            "p_or_q",
+            "truthteller"
+          ]
+        },
+        {
+          "E_minus": [
+            "T_q",
+            "liar",
+            "liar_and_not_liar",
+            "q",
+            "truthteller"
+          ],
+          "E_plus": [
+            "T_p",
+            "liar",
+            "liar_and_not_liar",
+            "liar_or_p",
+            "p",
+            "p_or_q",
+            "truthteller"
+          ]
+        },
+        {
+          "E_minus": [
+            "T_q",
+            "liar",
+            "liar_and_not_liar",
+            "q",
+            "truthteller"
+          ],
+          "E_plus": [
+            "T_p",
+            "liar",
+            "liar_and_not_liar",
+            "liar_or_p",
+            "p",
+            "p_or_q",
+            "truthteller"
+          ]
+        }
+      ]
+    },
+    "sk": {
+      "admissible_values": [
+        "t",
+        "f",
+        "n"
+      ],
+      "designated_values": [
+        "t"
+      ],
+      "least_fixed_point": {
+        "E_minus": [
+          "T_q",
+          "q"
+        ],
+        "E_plus": [
+          "T_p",
+          "liar_or_p",
+          "p",
+          "p_or_q"
+        ]
+      },
+      "least_fixed_point_values": {
+        "T_p": "t",
+        "T_q": "f",
+        "liar": "n",
+        "liar_and_not_liar": "n",
+        "liar_or_p": "t",
+        "p": "t",
+        "p_or_q": "t",
+        "q": "f",
+        "truthteller": "n"
+      },
+      "order": "inclusion on (E_plus,E_minus); n is bottom",
+      "trace": [
+        {
+          "E_minus": [],
+          "E_plus": []
+        },
+        {
+          "E_minus": [
+            "q"
+          ],
+          "E_plus": [
+            "liar_or_p",
+            "p",
+            "p_or_q"
+          ]
+        },
+        {
+          "E_minus": [
+            "T_q",
+            "q"
+          ],
+          "E_plus": [
+            "T_p",
+            "liar_or_p",
+            "p",
+            "p_or_q"
+          ]
+        },
+        {
+          "E_minus": [
+            "T_q",
+            "q"
+          ],
+          "E_plus": [
+            "T_p",
+            "liar_or_p",
+            "p",
+            "p_or_q"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "full_fragment_code_count": 9,
+  "full_fragment_codes": [
+    "T_p",
+    "T_q",
+    "liar",
+    "liar_and_not_liar",
+    "liar_or_p",
+    "p",
+    "p_or_q",
+    "q",
+    "truthteller"
+  ],
+  "minimality_by_fixed_point_enumeration": {
+    "lp": {
+      "codes": [
+        "T_p",
+        "T_q",
+        "liar",
+        "liar_and_not_liar",
+        "liar_or_p",
+        "p",
+        "p_or_q",
+        "q",
+        "truthteller"
+      ],
+      "fixed_point_count": 3,
+      "iteration_steps_to_fixed": 3,
+      "least_fixed_point": {
+        "E_minus": [
+          "T_q",
+          "liar",
+          "liar_and_not_liar",
+          "q",
+          "truthteller"
+        ],
+        "E_plus": [
+          "T_p",
+          "liar",
+          "liar_and_not_liar",
+          "liar_or_p",
+          "p",
+          "p_or_q",
+          "truthteller"
+        ]
+      },
+      "least_fixed_point_values": {
+        "T_p": "t",
+        "T_q": "f",
+        "liar": "b",
+        "liar_and_not_liar": "b",
+        "liar_or_p": "t",
+        "p": "t",
+        "p_or_q": "t",
+        "q": "f",
+        "truthteller": "b"
+      },
+      "minimality_passed": true,
+      "nonminimal_witnesses": [],
+      "scheme": "lp",
+      "state_space_size": 19683
+    },
+    "sk": {
+      "codes": [
+        "T_p",
+        "T_q",
+        "liar",
+        "liar_and_not_liar",
+        "liar_or_p",
+        "p",
+        "p_or_q",
+        "q",
+        "truthteller"
+      ],
+      "fixed_point_count": 3,
+      "iteration_steps_to_fixed": 3,
+      "least_fixed_point": {
+        "E_minus": [
+          "T_q",
+          "q"
+        ],
+        "E_plus": [
+          "T_p",
+          "liar_or_p",
+          "p",
+          "p_or_q"
+        ]
+      },
+      "least_fixed_point_values": {
+        "T_p": "t",
+        "T_q": "f",
+        "liar": "n",
+        "liar_and_not_liar": "n",
+        "liar_or_p": "t",
+        "p": "t",
+        "p_or_q": "t",
+        "q": "f",
+        "truthteller": "n"
+      },
+      "minimality_passed": true,
+      "nonminimal_witnesses": [],
+      "scheme": "sk",
+      "state_space_size": 19683
+    }
+  },
+  "monotonicity_by_cover_edges": {
+    "lp": {
+      "cover_edges_checked": 118098,
+      "failures": [],
+      "passed": true,
+      "scheme": "lp",
+      "states_checked": 19683
+    },
+    "sk": {
+      "cover_edges_checked": 118098,
+      "failures": [],
+      "passed": true,
+      "scheme": "sk",
+      "states_checked": 19683
+    }
+  },
+  "schema_version": "wp6-e-c1-enumeration-v1",
+  "state_space_size_per_scheme": 19683
+}

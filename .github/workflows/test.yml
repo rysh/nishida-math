@@ -33,6 +33,7 @@ jobs:
           uv run python experiments/wp5/build_claims.py
           uv run python experiments/wp5/build_table.py
           uv run python experiments/wp5/build_figure.py
+          uv run python experiments/wp6/e_c1_lp_truth_predicate.py
 
       - name: assert artifacts are deterministic
         run: git diff --exit-code

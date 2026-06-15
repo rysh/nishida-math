@@ -42,7 +42,7 @@ This is equivalent to running the CI workflow
 1. `uv sync` — install pinned dependencies from `uv.lock`.
 2. `uv run pytest -q` — run the 136-test suite.
 3. Regenerate every experiment artifact (WP3 ladder, WP4 classical / LP
-   evaluators, WP5 headline table / figure).
+   evaluators, WP5 headline table / figure, WP6 optional E-C1).
 4. `git diff --exit-code` — assert no artifact drifted. SVGs and the
    `claims.json` manifest are generated deterministically; any byte
    change fails the build.
@@ -60,6 +60,7 @@ uv run python experiments/wp4/e_b2_lp_quarantine.py
 uv run python experiments/wp5/build_claims.py
 uv run python experiments/wp5/build_table.py
 uv run python experiments/wp5/build_figure.py
+uv run python experiments/wp6/e_c1_lp_truth_predicate.py
 git diff --exit-code
 ```
 
@@ -79,6 +80,12 @@ experiments/
   wp4/               # E-B1 classical explosion, E-B2 LP quarantine.
   wp5/               # Headline integration: claims.json (single source of truth)
                      # + headline_table.md + headline_figure.svg.
+  wp6/               # E-C1 (optional): finite Kripke-style fixed-point model
+                     # for a transparent truth predicate over LP/strong-Kleene.
+                     # First-order upgrade of E-B2; control artifact, not headline.
+  wp6/lean/          # E-C2 (optional): Lean 4 stage-1 instantiation of
+                     # 𝗜𝚺₁ ⪱ 𝗜𝚺₁ + Con(𝗜𝚺₁), via FormalizedFormalLogic/
+                     # Foundation. Reproduce with `make wp6-lean` (needs elan).
 tests/               # 136 pytest tests; see Makefile target `test`.
 docs/
   integration_notes/ # Per-WP design / decision notes.

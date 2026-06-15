@@ -1,12 +1,13 @@
-.PHONY: install test artifacts verify all help
+.PHONY: install test artifacts verify all wp6-lean help
 
 help:
 	@echo "Targets:"
 	@echo "  install    - uv sync (install Python deps from uv.lock)"
 	@echo "  test       - uv run pytest -q"
-	@echo "  artifacts  - regenerate all experiment artifacts (WP3, WP4, WP5)"
+	@echo "  artifacts  - regenerate all experiment artifacts (WP3, WP4, WP5, WP6)"
 	@echo "  verify     - regenerate artifacts and assert no git diff (determinism)"
 	@echo "  all        - install + test + verify (single-command full reproduction)"
+	@echo "  wp6-lean   - build the optional Lean 4 deliverable (needs elan; not in 'all')"
 
 install:
 	uv sync
@@ -23,8 +24,12 @@ artifacts:
 	uv run python experiments/wp5/build_claims.py
 	uv run python experiments/wp5/build_table.py
 	uv run python experiments/wp5/build_figure.py
+	uv run python experiments/wp6/e_c1_lp_truth_predicate.py
 
 verify: artifacts
 	git diff --exit-code
 
 all: install test verify
+
+wp6-lean:
+	cd experiments/wp6/lean && lake update && lake build

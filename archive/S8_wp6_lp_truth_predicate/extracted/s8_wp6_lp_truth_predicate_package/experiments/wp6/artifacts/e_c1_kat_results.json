@@ -1,0 +1,265 @@
+[
+  {
+    "expected": "b",
+    "id": "KAT-01-LP-liar-b",
+    "input": "liar = not(T('liar')) in full fragment, LP least fixed point",
+    "observed": "b",
+    "passed": true
+  },
+  {
+    "expected": "n",
+    "id": "KAT-02-SK-liar-n",
+    "input": "liar = not(T('liar')) in full fragment, SK least fixed point",
+    "observed": "n",
+    "passed": true
+  },
+  {
+    "expected": "b",
+    "id": "KAT-03-LP-truth-teller-b",
+    "input": "truthteller = T('truthteller') in full fragment, LP least fixed point",
+    "observed": "b",
+    "passed": true
+  },
+  {
+    "expected": "n",
+    "id": "KAT-04-SK-truth-teller-n",
+    "input": "truthteller = T('truthteller') in full fragment, SK least fixed point",
+    "observed": "n",
+    "passed": true
+  },
+  {
+    "expected": {
+      "liar_and_not_liar": "b",
+      "liar_and_not_liar_designated": true,
+      "q": "f",
+      "q_designated": false
+    },
+    "id": "KAT-05-LP-no-explosion",
+    "input": "liar_and_not_liar is designated, but q remains false and undesignated",
+    "observed": {
+      "liar_and_not_liar": "b",
+      "liar_and_not_liar_designated": true,
+      "q": "f",
+      "q_designated": false
+    },
+    "passed": true
+  },
+  {
+    "expected": "no truth-value changes",
+    "id": "KAT-06-LP-inert-liar-free",
+    "input": "add liar-containing codes, compare all generated liar-free formulae through depth 2",
+    "observed": {
+      "depth": 2,
+      "generated_liar_free_formula_count": 7265,
+      "mismatches": [],
+      "passed": true,
+      "scheme": "lp"
+    },
+    "passed": true
+  },
+  {
+    "expected": "no truth-value changes",
+    "id": "KAT-07-SK-inert-liar-free",
+    "input": "add liar-containing codes, compare all generated liar-free formulae through depth 2",
+    "observed": {
+      "depth": 2,
+      "generated_liar_free_formula_count": 7265,
+      "mismatches": [],
+      "passed": true,
+      "scheme": "sk"
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "fixed_point_count": 0,
+      "liar_oscillates_from_empty": true
+    },
+    "id": "KAT-08-classical-no-fixed-point",
+    "input": "classical two-valued transparent liar over same finite code table",
+    "observed": {
+      "fixed_point_count": 0,
+      "liar_truth_sequence_from_empty": [
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "trace_from_empty": [
+        {
+          "liar_true": false,
+          "stage": 0,
+          "true_codes": []
+        },
+        {
+          "liar_true": true,
+          "stage": 1,
+          "true_codes": [
+            "liar",
+            "liar_or_p",
+            "p",
+            "p_or_q"
+          ]
+        },
+        {
+          "liar_true": false,
+          "stage": 2,
+          "true_codes": [
+            "T_p",
+            "liar_or_p",
+            "p",
+            "p_or_q"
+          ]
+        },
+        {
+          "liar_true": true,
+          "stage": 3,
+          "true_codes": [
+            "T_p",
+            "liar",
+            "liar_or_p",
+            "p",
+            "p_or_q"
+          ]
+        },
+        {
+          "liar_true": false,
+          "stage": 4,
+          "true_codes": [
+            "T_p",
+            "liar_or_p",
+            "p",
+            "p_or_q"
+          ]
+        },
+        {
+          "liar_true": true,
+          "stage": 5,
+          "true_codes": [
+            "T_p",
+            "liar",
+            "liar_or_p",
+            "p",
+            "p_or_q"
+          ]
+        },
+        {
+          "liar_true": false,
+          "stage": 6,
+          "true_codes": [
+            "T_p",
+            "liar_or_p",
+            "p",
+            "p_or_q"
+          ]
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "expected": "iterated fixed point is <= every fixed point in LP precision order",
+    "id": "KAT-09-LP-minimality-full-enumeration",
+    "input": "LP full 3^n state enumeration",
+    "observed": {
+      "codes": [
+        "T_p",
+        "T_q",
+        "liar",
+        "liar_and_not_liar",
+        "liar_or_p",
+        "p",
+        "p_or_q",
+        "q",
+        "truthteller"
+      ],
+      "fixed_point_count": 3,
+      "iteration_steps_to_fixed": 3,
+      "least_fixed_point": {
+        "E_minus": [
+          "T_q",
+          "liar",
+          "liar_and_not_liar",
+          "q",
+          "truthteller"
+        ],
+        "E_plus": [
+          "T_p",
+          "liar",
+          "liar_and_not_liar",
+          "liar_or_p",
+          "p",
+          "p_or_q",
+          "truthteller"
+        ]
+      },
+      "least_fixed_point_values": {
+        "T_p": "t",
+        "T_q": "f",
+        "liar": "b",
+        "liar_and_not_liar": "b",
+        "liar_or_p": "t",
+        "p": "t",
+        "p_or_q": "t",
+        "q": "f",
+        "truthteller": "b"
+      },
+      "minimality_passed": true,
+      "nonminimal_witnesses": [],
+      "scheme": "lp",
+      "state_space_size": 19683
+    },
+    "passed": true
+  },
+  {
+    "expected": "iterated fixed point is <= every fixed point in SK knowledge order",
+    "id": "KAT-10-SK-minimality-full-enumeration",
+    "input": "SK full 3^n state enumeration",
+    "observed": {
+      "codes": [
+        "T_p",
+        "T_q",
+        "liar",
+        "liar_and_not_liar",
+        "liar_or_p",
+        "p",
+        "p_or_q",
+        "q",
+        "truthteller"
+      ],
+      "fixed_point_count": 3,
+      "iteration_steps_to_fixed": 3,
+      "least_fixed_point": {
+        "E_minus": [
+          "T_q",
+          "q"
+        ],
+        "E_plus": [
+          "T_p",
+          "liar_or_p",
+          "p",
+          "p_or_q"
+        ]
+      },
+      "least_fixed_point_values": {
+        "T_p": "t",
+        "T_q": "f",
+        "liar": "n",
+        "liar_and_not_liar": "n",
+        "liar_or_p": "t",
+        "p": "t",
+        "p_or_q": "t",
+        "q": "f",
+        "truthteller": "n"
+      },
+      "minimality_passed": true,
+      "nonminimal_witnesses": [],
+      "scheme": "sk",
+      "state_space_size": 19683
+    },
+    "passed": true
+  }
+]

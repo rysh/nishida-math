@@ -1,0 +1,41 @@
+{
+  "engine": {
+    "function": "fixed_point",
+    "module": "gl.fixed_point",
+    "source_file": "fixed_point.py"
+  },
+  "ladder_reference": "experiments/wp3/artifacts/ladder_manifest.json",
+  "premise_formula_pretty": "¬□⊥",
+  "stages": [
+    {
+      "gl_status": "refuted",
+      "interpretation": "Con_0 does not entail this higher consequence; the higher rung is genuinely new.",
+      "premise": "H_godel (= Con_0)",
+      "target": "Con_1"
+    },
+    {
+      "gl_status": "refuted",
+      "interpretation": "Con_0 does not entail this higher consequence; the higher rung is genuinely new.",
+      "premise": "H_godel (= Con_0)",
+      "target": "Con_2"
+    },
+    {
+      "gl_status": "refuted",
+      "interpretation": "Con_0 does not entail this higher consequence; the higher rung is genuinely new.",
+      "premise": "H_godel (= Con_0)",
+      "target": "Con_3"
+    },
+    {
+      "gl_status": "refuted",
+      "interpretation": "Con_0 does not entail this higher consequence; the higher rung is genuinely new.",
+      "premise": "H_godel (= Con_0)",
+      "target": "Con_4"
+    },
+    {
+      "gl_status": "refuted",
+      "interpretation": "Con_0 does not entail this higher consequence; the higher rung is genuinely new.",
+      "premise": "H_godel (= Con_0)",
+      "target": "Con_5"
+    }
+  ]
+}

@@ -55,6 +55,7 @@ uv run pytest -q
 uv run python experiments/wp3/build_countermodels.py
 uv run python experiments/wp3/build_ladder.py
 uv run python experiments/wp3/build_figure.py
+uv run python experiments/wp3a/e_a3_henkin_vs_godel.py
 uv run python experiments/wp4/e_b1_classical_explosion.py
 uv run python experiments/wp4/e_b2_lp_quarantine.py
 uv run python experiments/wp5/build_claims.py
@@ -77,6 +78,8 @@ src/
 experiments/
   wp3/               # Con_n hierarchy: ladder manifest + figure SVG + per-stage
                      # countermodels (minimality exhaustively verified for n ≤ 4).
+  wp3a/              # E-A3: same fixed-point engine on ¬□p vs □p — Gödel seed
+                     # reduces to Con_0 (launch), Henkin seed reduces to ⊤ (flatline).
   wp4/               # E-B1 classical explosion, E-B2 LP quarantine.
   wp5/               # Headline integration: claims.json (single source of truth)
                      # + headline_table.md + headline_figure.svg.

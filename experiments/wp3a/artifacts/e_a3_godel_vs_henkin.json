@@ -1,0 +1,65 @@
+{
+  "engine": {
+    "function": "fixed_point",
+    "module": "gl.fixed_point",
+    "source_file": "fixed_point.py"
+  },
+  "godel_seed": {
+    "body_pretty": "Not(Box(atom(p)))",
+    "fixed_point_json": {
+      "arg": {
+        "arg": {
+          "type": "bot"
+        },
+        "type": "box"
+      },
+      "type": "not"
+    },
+    "fixed_point_pretty": "¬□⊥",
+    "gl_proves_reduction_to_con0": true,
+    "hierarchy_artifact": "experiments/wp3/artifacts/ladder_manifest.json",
+    "is_gl_theorem": false,
+    "launches_hierarchy": true,
+    "letterless_nf_equiv_con0": true,
+    "measure_growth": "n+2 (linear) — see Con_n countermodel chain",
+    "reduces_to_in_gl": "¬□⊥ (Con_0)"
+  },
+  "henkin_seed": {
+    "body_pretty": "Box(atom(p))",
+    "fixed_point_json": {
+      "arg": {
+        "type": "bot"
+      },
+      "type": "not"
+    },
+    "fixed_point_pretty": "¬⊥",
+    "gl_proves_reduction_to_top": true,
+    "is_gl_theorem": true,
+    "launches_hierarchy": false,
+    "letterless_nf_equiv_top": true,
+    "measure_growth": "zero — see e_a3_henkin_flatline.json",
+    "reduces_to_in_gl": "⊤"
+  },
+  "interpretation": "The two seeds, differing by exactly one negation around □p, are fed through the same fixed-point function and classified by the same GL prover on the same letterless fragment. The Gödel seed reduces to ¬□⊥ (Con_0), which is not a GL theorem and is the first rung of the E-A2 ladder. The Henkin seed reduces to ⊤, which is a GL theorem and adds nothing when adjoined. This is an instantiation of Boolos 1993 (Löb's theorem applied to the Henkin fixed point), not new mathematics. The §4 metric framing is: Gödel-seed generativity = unbounded (linear n+2), Henkin-seed generativity = zero.",
+  "seed_delta": {
+    "godel_body_json": {
+      "arg": {
+        "arg": {
+          "name": "p",
+          "type": "atom"
+        },
+        "type": "box"
+      },
+      "type": "not"
+    },
+    "henkin_body_json": {
+      "arg": {
+        "name": "p",
+        "type": "atom"
+      },
+      "type": "box"
+    },
+    "structural_check": true,
+    "structural_relation": "godel_body == {'type': 'not', 'arg': henkin_body}"
+  }
+}

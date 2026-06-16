@@ -114,10 +114,56 @@ and is the single source of truth for both the table at
 - **Triviality objection (§4-1).** `Con_n` is *not* an imported axiom; the
   diagonal engine computes it from the system's own provability structure
   (`src/gl/formula.py:con`, `src/gl/box_power`). The Henkin contrast
-  experiment (E-A3) that strengthens this answer further by showing the
-  same engine generates nothing from a Henkin seed is **not** implemented
-  in this repository; that contrast is referenced from the literature
-  (Boolos 1993) and is listed as out of scope here.
+  experiment that strengthens this answer further is now implemented as
+  Claim 3a (E-A3) below.
+
+### Claim 3a — E-A3: same engine, opposite outcomes (Gödel vs Henkin seed)
+
+- **Status.** Implemented; closes the prior caveat that listed E-A3 as
+  out of scope. Lives under `experiments/wp3a/`.
+- **Environment.** GL provability logic. The single fixed-point engine
+  `gl.fixed_point.fixed_point(A, p)` (de Jongh / Sambin) is reused
+  verbatim for both seeds; the single decision procedure
+  `gl.tableau.prove_gl` classifies both sides; the single closed-fragment
+  measure (GL-provable equivalence in the letterless fragment via
+  `gl.letterless.nf_equiv`) is applied to both sides.
+- **Seed delta.** The two seed bodies differ by exactly one connective:
+  `¬□p` versus `□p`. This is recorded structurally in the artifact under
+  `seed_delta.structural_check: true` (i.e. `godel_body == Not(henkin_body)`
+  as Formula JSON).
+- **Status.**
+  - **Gödel seed** `H ↔ ¬□H` reduces in GL to `Con_0 = ¬□⊥` —
+    `prove_gl(Iff(H_godel, con(0))).status = "proved"` and
+    `nf_equiv(H_godel, con(0)) = True`. `H_godel` is **not** a GL theorem
+    (`prove_gl(H_godel).status = "refuted"`); this non-theoremhood is
+    exactly what makes it the first rung of the Claim 3 ladder.
+  - **Henkin seed** `K ↔ □K` reduces in GL to `⊤` — Löb's theorem
+    applied to the fixed-point equation. `H_henkin` **is** a GL theorem
+    (`prove_gl(H_henkin).status = "proved"`).
+  - **Flatline witness.** For every letterless `B` in the recorded
+    sample, `GL ⊢ (K → B) ↔ B`; hence adjoining `K` as an axiom adds no
+    new letterless theorems.
+  - **Launch witness.** For each `n ∈ {0, 1, 2, 3, 4}`,
+    `GL ⊬ Con_0 → Con_{n+1}` — the higher rungs are genuinely new and
+    must each be adjoined separately, which is exactly the Claim 3
+    ladder.
+- **Certificate.**
+  - `experiments/wp3a/artifacts/e_a3_godel_vs_henkin.json` — the
+    side-by-side summary.
+  - `experiments/wp3a/artifacts/e_a3_godel_no_new_letterless.json` —
+    `GL ⊬ Con_0 → Con_{n+1}` for `n ≤ 4`.
+  - `experiments/wp3a/artifacts/e_a3_henkin_flatline.json` —
+    `GL ⊢ (K → B) ↔ B` for the letterless sample.
+- **§4 metric framing.** Gödel-seed generativity = **unbounded (n+2)**;
+  Henkin-seed generativity = **zero**. The active ingredient of
+  generation in this artifact is the negative self-reference structure
+  `¬□p`, not contradiction; the same engine on `□p` yields a theorem
+  that adds nothing.
+- **What is *not* claimed.** This is an instantiation of Boolos 1993
+  (Löb's theorem applied to the Henkin fixed point). The mathematics is
+  not new. The §4-metric reading is a description of the artifact under
+  the project's measure, not a philosophical proof. As with the rest of
+  the repository: illustration, not proof.
 
 ### Claim 4 — LP/SK transparent truth predicate: liar quarantined at fixed point (E-C1, optional)
 

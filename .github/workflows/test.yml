@@ -28,6 +28,7 @@ jobs:
           uv run python experiments/wp3/build_countermodels.py
           uv run python experiments/wp3/build_ladder.py
           uv run python experiments/wp3/build_figure.py
+          uv run python experiments/wp3a/e_a3_henkin_vs_godel.py
           uv run python experiments/wp4/e_b1_classical_explosion.py
           uv run python experiments/wp4/e_b2_lp_quarantine.py
           uv run python experiments/wp5/build_claims.py

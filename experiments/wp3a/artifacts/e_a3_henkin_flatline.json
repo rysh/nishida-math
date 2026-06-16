@@ -1,0 +1,103 @@
+{
+  "all_unchanged": true,
+  "claim": "For every B in the letterless sample, GL ⊢ (K → B) ↔ B; hence adjoining K as an axiom adds no new letterless theorems.",
+  "engine": {
+    "function": "fixed_point",
+    "module": "gl.fixed_point",
+    "source_file": "fixed_point.py"
+  },
+  "henkin_fp_pretty": "¬⊥",
+  "witnesses": [
+    {
+      "B_json": {
+        "type": "bot"
+      },
+      "B_pretty": "⊥",
+      "gl_proves_K_implies_B_iff_B": true
+    },
+    {
+      "B_json": {
+        "arg": {
+          "type": "bot"
+        },
+        "type": "not"
+      },
+      "B_pretty": "¬⊥",
+      "gl_proves_K_implies_B_iff_B": true
+    },
+    {
+      "B_json": {
+        "arg": {
+          "type": "bot"
+        },
+        "type": "box"
+      },
+      "B_pretty": "□⊥",
+      "gl_proves_K_implies_B_iff_B": true
+    },
+    {
+      "B_json": {
+        "arg": {
+          "arg": {
+            "type": "bot"
+          },
+          "type": "box"
+        },
+        "type": "not"
+      },
+      "B_pretty": "¬□⊥",
+      "gl_proves_K_implies_B_iff_B": true
+    },
+    {
+      "B_json": {
+        "arg": {
+          "arg": {
+            "arg": {
+              "type": "bot"
+            },
+            "type": "box"
+          },
+          "type": "box"
+        },
+        "type": "not"
+      },
+      "B_pretty": "¬□□⊥",
+      "gl_proves_K_implies_B_iff_B": true
+    },
+    {
+      "B_json": {
+        "arg": {
+          "arg": {
+            "arg": {
+              "arg": {
+                "type": "bot"
+              },
+              "type": "box"
+            },
+            "type": "box"
+          },
+          "type": "box"
+        },
+        "type": "not"
+      },
+      "B_pretty": "¬□□□⊥",
+      "gl_proves_K_implies_B_iff_B": true
+    },
+    {
+      "B_json": {
+        "arg": {
+          "arg": {
+            "arg": {
+              "type": "bot"
+            },
+            "type": "box"
+          },
+          "type": "box"
+        },
+        "type": "box"
+      },
+      "B_pretty": "□□□⊥",
+      "gl_proves_K_implies_B_iff_B": true
+    }
+  ]
+}

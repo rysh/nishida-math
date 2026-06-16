@@ -1051,6 +1051,7 @@ z
      <use xlink:href="#m7481e661e6" x="147.659886" y="186.189091" style="fill: #1f4f8a; stroke: #1f4f8a"/>
      <use xlink:href="#m7481e661e6" x="190.400529" y="161.184545" style="fill: #1f4f8a; stroke: #1f4f8a"/>
      <use xlink:href="#m7481e661e6" x="233.141172" y="136.18" style="fill: #1f4f8a; stroke: #1f4f8a"/>
+     <use xlink:href="#m7481e661e6" x="275.881815" y="111.175455" style="fill: #1f4f8a; stroke: #1f4f8a"/>
     </g>
    </g>
    <g id="PathCollection_2">
@@ -1068,7 +1069,6 @@ z
 " style="stroke: #1f4f8a; stroke-width: 1.2"/>
     </defs>
     <g clip-path="url(#p2c47101ba4)">
-     <use xlink:href="#ma0307b20f0" x="275.881815" y="111.175455" style="fill: #ffffff; stroke: #1f4f8a; stroke-width: 1.2"/>
      <use xlink:href="#ma0307b20f0" x="318.622457" y="86.170909" style="fill: #ffffff; stroke: #1f4f8a; stroke-width: 1.2"/>
      <use xlink:href="#ma0307b20f0" x="361.3631" y="61.166364" style="fill: #ffffff; stroke: #1f4f8a; stroke-width: 1.2"/>
      <use xlink:href="#ma0307b20f0" x="404.103743" y="36.161818" style="fill: #ffffff; stroke: #1f4f8a; stroke-width: 1.2"/>

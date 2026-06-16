@@ -93,12 +93,12 @@ and is the single source of truth for both the table at
   - The witnessing model is an `(n+2)`-chain (linear, transitive,
     irreflexive). Witness world counts: `[2, 3, 4, 5, 6, 7, 8, 9, 10]`.
   - **Minimality** of the `(n+2)`-chain is *exhaustively verified* for
-    `n ∈ {0, 1, 2, 3, 4}` by enumeration over all finite GL frames of
-    bounded height; for `n ∈ {5, 6, 7, 8}` the same linear witness is
+    `n ∈ {0, 1, 2, 3, 4, 5}` by enumeration over all finite GL frames of
+    bounded height; for `n ∈ {6, 7, 8}` the same linear witness is
     exhibited but minimality is structural, not exhaustive.
 - **Certificate / countermodel.**
   - `experiments/wp3/artifacts/ladder_manifest.json` —
-    `max_n: 8`, `exhaustive_max: 4`, 9 stages, each with
+    `max_n: 8`, `exhaustive_max: 5`, 9 stages, each with
     `monotone_status: "proved"`, `strict_status: "refuted"`,
     `countermodel_verified: true`.
   - Individual countermodel JSONs:

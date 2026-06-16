@@ -165,7 +165,7 @@ def build_ladder_data(max_n: int = 8, exhaustive_max: int = 4) -> dict[str, Any]
 
 def run() -> dict[str, Any]:
     ARTIFACT_DIR.mkdir(parents=True, exist_ok=True)
-    data = build_ladder_data(max_n=8, exhaustive_max=4)
+    data = build_ladder_data(max_n=8, exhaustive_max=5)
     MANIFEST_PATH.write_text(
         json.dumps(data, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",

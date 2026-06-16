@@ -29,12 +29,12 @@ build_figure = importlib.import_module("build_figure")
 def manifest() -> dict:
     """Build the ladder manifest fresh so tests do not depend on whatever is
     currently committed under ``experiments/wp3/artifacts/``."""
-    return build_ladder.build_ladder_data(max_n=8, exhaustive_max=4)
+    return build_ladder.build_ladder_data(max_n=8, exhaustive_max=5)
 
 
 def test_manifest_top_level_shape(manifest: dict) -> None:
     assert manifest["max_n"] == 8
-    assert manifest["exhaustive_max"] == 4
+    assert manifest["exhaustive_max"] == 5
     assert len(manifest["stages"]) == 9
 
 
@@ -53,7 +53,7 @@ def test_each_stage_has_certified_monotone_and_strict(manifest: dict, n: int) ->
     assert record["countermodel_verified"] is True
 
 
-@pytest.mark.parametrize("n", range(5))
+@pytest.mark.parametrize("n", range(6))
 def test_minimality_exhaustively_confirmed_for_small_n(
     manifest: dict, n: int
 ) -> None:
@@ -64,7 +64,7 @@ def test_minimality_exhaustively_confirmed_for_small_n(
     assert check["frames_examined"] >= 1
 
 
-@pytest.mark.parametrize("n", range(5, 9))
+@pytest.mark.parametrize("n", range(6, 9))
 def test_minimality_not_exhaustively_checked_for_large_n(
     manifest: dict, n: int
 ) -> None:

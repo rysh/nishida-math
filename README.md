@@ -77,7 +77,7 @@ src/
   classical/         # Classical two-valued evaluator and entailment.
 experiments/
   wp3/               # Con_n hierarchy: ladder manifest + figure SVG + per-stage
-                     # countermodels (minimality exhaustively verified for n ≤ 4).
+                     # countermodels (minimality exhaustively verified for n ≤ 5).
   wp3a/              # E-A3: same fixed-point engine on ¬□p vs □p — Gödel seed
                      # reduces to Con_0 (launch), Henkin seed reduces to ⊤ (flatline).
   wp4/               # E-B1 classical explosion, E-B2 LP quarantine.

@@ -153,8 +153,8 @@ def _gl_row() -> dict[str, Any]:
     _check("gl", manifest["max_n"] == 8, f"max_n must be 8; got {manifest['max_n']!r}")
     _check(
         "gl",
-        manifest["exhaustive_max"] == 4,
-        f"exhaustive_max must be 4; got {manifest['exhaustive_max']!r}",
+        manifest["exhaustive_max"] == 5,
+        f"exhaustive_max must be 5; got {manifest['exhaustive_max']!r}",
     )
     _check("gl", len(stages) == 9, f"stages must have 9 entries; got {len(stages)}")
 
@@ -186,8 +186,8 @@ def _gl_row() -> dict[str, Any]:
     exhaustive = [s["minimality_exhaustively_checked"] for s in stages]
     _check(
         "gl",
-        exhaustive[:5] == [True] * 5 and exhaustive[5:] == [False] * 4,
-        f"exhaustive minimality must be checked exactly for n=0..4; got {exhaustive}",
+        exhaustive[:6] == [True] * 6 and exhaustive[6:] == [False] * 3,
+        f"exhaustive minimality must be checked exactly for n=0..5; got {exhaustive}",
     )
 
     return {

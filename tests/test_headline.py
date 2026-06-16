@@ -97,7 +97,7 @@ def test_gl_row_matches_artifact(claims: dict) -> None:
     )
     keys = row["formal_witness"]["keys"]
     assert manifest["max_n"] == keys["max_n"] == 8
-    assert manifest["exhaustive_max"] == keys["exhaustive_max"] == 4
+    assert manifest["exhaustive_max"] == keys["exhaustive_max"] == 5
     counts = [s["witness_world_count"] for s in manifest["stages"]]
     assert counts == keys["witness_world_counts"] == list(range(2, 11))
     assert all(s["monotone_status"] == "proved" for s in manifest["stages"])

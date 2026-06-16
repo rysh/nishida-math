@@ -86,7 +86,7 @@
         "artifact": "experiments/wp3/artifacts/ladder_manifest.json",
         "keys": {
           "max_n": 8,
-          "exhaustive_max": 4,
+          "exhaustive_max": 5,
           "all_monotone_proved": true,
           "all_strict_refuted": true,
           "all_countermodels_verified": true,
@@ -106,7 +106,8 @@
             1,
             2,
             3,
-            4
+            4,
+            5
           ]
         }
       },

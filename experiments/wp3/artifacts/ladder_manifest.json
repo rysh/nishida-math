@@ -1,7 +1,7 @@
 {
   "spec": "GL hierarchy of iterated consistency; minimal witness world count grows as n + 2.",
   "max_n": 8,
-  "exhaustive_max": 4,
+  "exhaustive_max": 5,
   "stages": [
     {
       "stage": 0,
@@ -85,7 +85,13 @@
       "witness_world_count": 7,
       "countermodel_path": "experiments/wp3/countermodels/strict_n5.json",
       "countermodel_verified": true,
-      "minimality_exhaustively_checked": false
+      "minimality_exhaustively_checked": true,
+      "minimality_check": {
+        "smallest_frame_size_tried": 1,
+        "largest_frame_size_tried": 6,
+        "frames_examined": 408,
+        "ok": true
+      }
     },
     {
       "stage": 6,
